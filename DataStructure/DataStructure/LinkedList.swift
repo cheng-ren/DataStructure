@@ -25,15 +25,28 @@ class LinkedList<E: Equatable> {
         
     }
     
+    subscript(index: Int) -> E {
+        set {
+            insert(newValue, at: index)
+        }
+        get {
+            searchNode(at: index).val
+        }
+    }
+    
     
     // MARK: 增
     
-    public func add(_ element: E) {
+    public func append(_ element: E) {
         ensureCapacity(count)
         
-        let node = searchNode(at: count - 1)
         let newNode = Node(element)
-        node.next = newNode
+        if count == 0 {
+            first = newNode
+        } else {
+            let lastNode: Node? = searchNode(at: count - 1)
+            lastNode?.next = newNode
+        }
         count += 1
     }
     
@@ -45,12 +58,24 @@ class LinkedList<E: Equatable> {
         rangeCheckForAdd(index)
         ensureCapacity(count)
         
-        let lastNode = searchNode(at: index - 1)
-        let nextNode: Node? = index == count ? searchNode(at: index) : nil
         let currNode = Node(element)
-        
-        lastNode.next = currNode
-        currNode.next = nextNode
+        if count == 0 {
+            first = currNode
+        } else {
+            if index == 0 {
+                let node = first
+                currNode.next = node
+                first = currNode
+            } else if index == count {
+                let lastNode = searchNode(at: index - 1)
+                lastNode.next = currNode
+            } else {
+                let lastNode = searchNode(at: index - 1)
+                let nextNode = searchNode(at: index)
+                lastNode.next = currNode
+                currNode.next = nextNode
+            }
+        }
 
         count += 1
     }

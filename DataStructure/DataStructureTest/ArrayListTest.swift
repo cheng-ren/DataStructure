@@ -69,11 +69,40 @@ class ArrayListTest: XCTestCase {
         XCTAssertTrue(arr.isEmpty())
     }
     
+    func testSearchIndex() {
+        let arr = ArrayList<Int>(capacity: 2)
+        arr.append(10)
+        arr.append(20)
+        arr.append(10)
+        XCTAssertEqual(arr.index(of: 10), 0)
+        XCTAssertEqual(arr.index(of: 20), 1)
+    }
+    
+    func testContains() {
+        let arr = ArrayList<Int>(capacity: 2)
+        arr.append(10)
+        arr.append(20)
+        XCTAssertTrue(arr.contains(10))
+        XCTAssertFalse(arr.contains(30))
+    }
+    
     
     // MARK: 其他
     
     func testCapacity() {
         
+    }
+    
+    
+    // MARK: 性能
+    
+    func testPerformance() {
+        let arr = ArrayList<Int>(capacity: 2)
+        measure {
+            for _ in 0..<10000 {
+                arr.append(20)
+            }
+        }
     }
     
 }
