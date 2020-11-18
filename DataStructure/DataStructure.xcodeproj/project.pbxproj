@@ -83,10 +83,9 @@
 		AF636E5025651E890061E615 /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
-				AF636E5B256520070061E615 /* ArrayList.swift */,
-				AF636E5A256520070061E615 /* LinkedList.swift */,
+				AF636E8525656B1A0061E615 /* Classes */,
+				AF636E8425656B0A0061E615 /* Model */,
 				AF636E5125651E890061E615 /* main.swift */,
-				AF636E73256520C40061E615 /* Person.swift */,
 			);
 			path = DataStructure;
 			sourceTree = "<group>";
@@ -100,6 +99,23 @@
 				AF636E672565207C0061E615 /* Info.plist */,
 			);
 			path = DataStructureTest;
+			sourceTree = "<group>";
+		};
+		AF636E8425656B0A0061E615 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF636E73256520C40061E615 /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF636E8525656B1A0061E615 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AF636E5B256520070061E615 /* ArrayList.swift */,
+				AF636E5A256520070061E615 /* LinkedList.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
