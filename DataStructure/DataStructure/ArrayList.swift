@@ -16,13 +16,21 @@ public class ArrayList<E: Equatable>: NSObject {
     
     
     init(capacity: Int) {
-        elements = Array(repeating: 0, count: capacity)
+        elements = Array(repeating: nil, count: capacity)
     }
     
+    subscript(index: Int) -> E {
+        set {
+            insert(newValue, at: index)
+        }
+        get {
+            get(index)
+        }
+    }
     
     // MARK: 增
     
-    public func add(_ element: E) {
+    public func append(_ element: E) {
         ensureCapacity(count)
         
         elements[count] = element
@@ -37,8 +45,10 @@ public class ArrayList<E: Equatable>: NSObject {
         rangeCheckForAdd(index)
         ensureCapacity(count)
         
-        for i in ((index + 1)...count).reversed() {
-            elements[i] = elements[i - 1]
+        if index < count {
+            for i in ((index + 1)...count).reversed() {
+                elements[i] = elements[i - 1]
+            }
         }
         elements[index] = element
         count += 1
@@ -52,8 +62,8 @@ public class ArrayList<E: Equatable>: NSObject {
     /// - Parameter element: 元素
     /// - Returns: 下标
     public func index(of element: E) -> Int {
-        for (i, ele) in elements.enumerated() {
-            if element == ele as! E {
+        for i in 0..<count {
+            if elements[i] as! E == element {
                 return i
             }
         }
@@ -75,7 +85,7 @@ public class ArrayList<E: Equatable>: NSObject {
     /// 获取某个下标的元素
     /// - Parameter index: 下标
     /// - Returns: 元素
-    public func get(_ index: Int) -> E {
+    private func get(_ index: Int) -> E {
         rangeCheck(index)
         return elements[index] as! E
     }
@@ -87,8 +97,8 @@ public class ArrayList<E: Equatable>: NSObject {
     /// - Parameter index: 下标
     public func remove(at index: Int) {
         rangeCheck(index)
-        for i in index..<count {
-            elements[i] = elements[i+1]
+        for i in index+1..<count {
+            elements[i - 1] = elements[i]
         }
         count -= 1
         elements[count] = nil;
@@ -125,7 +135,7 @@ public class ArrayList<E: Equatable>: NSObject {
                 
         // 新容量为旧容量的1.5倍
         let newCapacity = oldCapacity + (oldCapacity >> 1);
-        var newElements: Array<Any?> = Array(repeating: 0, count: newCapacity)
+        var newElements: Array<Any?> = Array(repeating: nil, count: newCapacity)
         for i in 0..<count {
             newElements[i] = elements[i];
         }

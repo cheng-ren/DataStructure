@@ -10,6 +10,13 @@
 		AF636E5225651E890061E615 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5125651E890061E615 /* main.swift */; };
 		AF636E5C256520070061E615 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5A256520070061E615 /* LinkedList.swift */; };
 		AF636E5D256520070061E615 /* ArrayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5B256520070061E615 /* ArrayList.swift */; };
+		AF636E662565207C0061E615 /* DataStructureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E652565207C0061E615 /* DataStructureTest.swift */; };
+		AF636E6E256520A90061E615 /* ArrayListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E6D256520A90061E615 /* ArrayListTest.swift */; };
+		AF636E74256520C40061E615 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E73256520C40061E615 /* Person.swift */; };
+		AF636E77256521050061E615 /* ArrayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5B256520070061E615 /* ArrayList.swift */; };
+		AF636E7A256521090061E615 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5A256520070061E615 /* LinkedList.swift */; };
+		AF636E7D2565210C0061E615 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E73256520C40061E615 /* Person.swift */; };
+		AF636E8125653E780061E615 /* LinkedListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E8025653E780061E615 /* LinkedListTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,10 +36,23 @@
 		AF636E5125651E890061E615 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AF636E5A256520070061E615 /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		AF636E5B256520070061E615 /* ArrayList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayList.swift; sourceTree = "<group>"; };
+		AF636E632565207C0061E615 /* DataStructureTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructureTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF636E652565207C0061E615 /* DataStructureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTest.swift; sourceTree = "<group>"; };
+		AF636E672565207C0061E615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF636E6D256520A90061E615 /* ArrayListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayListTest.swift; sourceTree = "<group>"; };
+		AF636E73256520C40061E615 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		AF636E8025653E780061E615 /* LinkedListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AF636E4B25651E890061E615 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF636E602565207C0061E615 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				AF636E5025651E890061E615 /* DataStructure */,
+				AF636E642565207C0061E615 /* DataStructureTest */,
 				AF636E4F25651E890061E615 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				AF636E4E25651E890061E615 /* DataStructure */,
+				AF636E632565207C0061E615 /* DataStructureTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,8 +86,20 @@
 				AF636E5B256520070061E615 /* ArrayList.swift */,
 				AF636E5A256520070061E615 /* LinkedList.swift */,
 				AF636E5125651E890061E615 /* main.swift */,
+				AF636E73256520C40061E615 /* Person.swift */,
 			);
 			path = DataStructure;
+			sourceTree = "<group>";
+		};
+		AF636E642565207C0061E615 /* DataStructureTest */ = {
+			isa = PBXGroup;
+			children = (
+				AF636E652565207C0061E615 /* DataStructureTest.swift */,
+				AF636E6D256520A90061E615 /* ArrayListTest.swift */,
+				AF636E8025653E780061E615 /* LinkedListTest.swift */,
+				AF636E672565207C0061E615 /* Info.plist */,
+			);
+			path = DataStructureTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +122,23 @@
 			productReference = AF636E4E25651E890061E615 /* DataStructure */;
 			productType = "com.apple.product-type.tool";
 		};
+		AF636E622565207C0061E615 /* DataStructureTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF636E682565207C0061E615 /* Build configuration list for PBXNativeTarget "DataStructureTest" */;
+			buildPhases = (
+				AF636E5F2565207C0061E615 /* Sources */,
+				AF636E602565207C0061E615 /* Frameworks */,
+				AF636E612565207C0061E615 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DataStructureTest;
+			productName = DataStructureTest;
+			productReference = AF636E632565207C0061E615 /* DataStructureTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +149,9 @@
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					AF636E4D25651E890061E615 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					AF636E622565207C0061E615 = {
 						CreatedOnToolsVersion = 12.2;
 					};
 				};
@@ -116,9 +170,20 @@
 			projectRoot = "";
 			targets = (
 				AF636E4D25651E890061E615 /* DataStructure */,
+				AF636E622565207C0061E615 /* DataStructureTest */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF636E612565207C0061E615 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AF636E4A25651E890061E615 /* Sources */ = {
@@ -127,7 +192,21 @@
 			files = (
 				AF636E5C256520070061E615 /* LinkedList.swift in Sources */,
 				AF636E5D256520070061E615 /* ArrayList.swift in Sources */,
+				AF636E74256520C40061E615 /* Person.swift in Sources */,
 				AF636E5225651E890061E615 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF636E5F2565207C0061E615 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF636E7D2565210C0061E615 /* Person.swift in Sources */,
+				AF636E662565207C0061E615 /* DataStructureTest.swift in Sources */,
+				AF636E8125653E780061E615 /* LinkedListTest.swift in Sources */,
+				AF636E77256521050061E615 /* ArrayList.swift in Sources */,
+				AF636E7A256521090061E615 /* LinkedList.swift in Sources */,
+				AF636E6E256520A90061E615 /* ArrayListTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +350,42 @@
 			};
 			name = Release;
 		};
+		AF636E692565207C0061E615 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = RJ3HT64AS6;
+				INFOPLIST_FILE = DataStructureTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rencheng.datastructure.DataStructureTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AF636E6A2565207C0061E615 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = RJ3HT64AS6;
+				INFOPLIST_FILE = DataStructureTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rencheng.datastructure.DataStructureTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -288,6 +403,15 @@
 			buildConfigurations = (
 				AF636E5625651E890061E615 /* Debug */,
 				AF636E5725651E890061E615 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF636E682565207C0061E615 /* Build configuration list for PBXNativeTarget "DataStructureTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF636E692565207C0061E615 /* Debug */,
+				AF636E6A2565207C0061E615 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
