@@ -7,7 +7,8 @@
 
 import Foundation
 
-let arr = LinkedList<Int>(capacity: 2)
+let arr = LinkedList<Int>()
+
 for _ in 0..<10000 {
     arr.insert(20, at: 0)
 //    arr.append(20)

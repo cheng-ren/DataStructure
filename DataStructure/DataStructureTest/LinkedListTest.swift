@@ -12,14 +12,14 @@ class LinkedListTest: XCTestCase {
     // MARK: 增
     
     func testAppend() {
-        let arr = LinkedList<Int>(capacity: 2)
+        let arr = LinkedList<Int>()
         arr.append(2)
         XCTAssertTrue(arr.contains(2), "找到指定元素")
         XCTAssertFalse(arr.contains(0), "找到指定元素")
     }
     
     func testInsert() {
-        let arr = LinkedList<Int>(capacity: 2)
+        let arr = LinkedList<Int>()
         arr.insert(3, at: 0)
         arr.insert(4, at: 1)
         XCTAssertEqual(arr.count, 2)
@@ -31,7 +31,7 @@ class LinkedListTest: XCTestCase {
     // MARK: 删
     
     func testRemove() {
-        let arr = LinkedList<Int>(capacity: 2)
+        let arr = LinkedList<Int>()
         arr.append(10)
         arr.append(20)
         arr.append(30)
@@ -48,7 +48,7 @@ class LinkedListTest: XCTestCase {
     // MARK: 改
     
     func testUpdate() {
-        let arr = LinkedList<Int>(capacity: 2)
+        let arr = LinkedList<Int>()
         arr.append(10)
         arr.append(20)
         XCTAssertEqual(arr[1], 20)
@@ -61,7 +61,7 @@ class LinkedListTest: XCTestCase {
     // MARK: 查
     
     func testEmpty() {
-        let arr = LinkedList<Int>(capacity: 2)
+        let arr = LinkedList<Int>()
         arr.append(10)
         XCTAssertFalse(arr.isEmpty())
         arr.removeAll()
@@ -69,7 +69,7 @@ class LinkedListTest: XCTestCase {
     }
     
     func testSearchIndex() {
-        let arr = LinkedList<Int>(capacity: 2)
+        let arr = LinkedList<Int>()
         arr.append(10)
         arr.append(20)
         arr.append(10)
@@ -78,7 +78,7 @@ class LinkedListTest: XCTestCase {
     }
     
     func testContains() {
-        let arr = LinkedList<Int>(capacity: 2)
+        let arr = LinkedList<Int>()
         arr.append(10)
         arr.append(20)
         XCTAssertTrue(arr.contains(10))
@@ -96,7 +96,7 @@ class LinkedListTest: XCTestCase {
     // MARK: 性能
     
     func testPerformance() {
-        let arr = LinkedList<Int>(capacity: 2)
+        let arr = LinkedList<Int>()
         measure {
             for _ in 0..<10000 {
                 arr.insert(20, at: 0)

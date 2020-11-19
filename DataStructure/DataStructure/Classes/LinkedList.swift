@@ -8,7 +8,7 @@
 import Cocoa
 
 
-class LinkedList<E: Equatable> {
+public class LinkedList<E: Equatable> {
     private class Node<E> {
         let val: E
         var next: Node?
@@ -21,7 +21,7 @@ class LinkedList<E: Equatable> {
     private var first: Node<E>?
     private(set) var count: Int = 0
     
-    init(capacity: Int) {
+    init() {
         
     }
     
