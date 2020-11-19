@@ -3,15 +3,20 @@
 //  ArrayListDemo
 //
 //  Created by 任成 on 2020/11/17.
+//
 //  顺序表练习
+//
+//  可以存入任何值包括可选类型
+//
+//
+
 
 import Cocoa
 
 public class ArrayList<E: Equatable>: NSObject {
     private let defaultCapacity = 5
     
-    /// 为什么用 `Any`?, 因为初始化的时候, 需要传入默认值.
-    private var elements: [Any?]!
+    private var elements: [E?]!
     private(set) var count: Int = 0
     
     
@@ -41,7 +46,7 @@ public class ArrayList<E: Equatable>: NSObject {
     /// - Parameters:
     ///   - element: 元素
     ///   - index: 位置
-    public func insert(_ element: E, at index: Int) {
+    public func insert(_ element: E?, at index: Int) {
         rangeCheckForAdd(index)
         ensureCapacity(count)
         
@@ -61,9 +66,9 @@ public class ArrayList<E: Equatable>: NSObject {
     /// 找到元素在数组中的首个位置
     /// - Parameter element: 元素
     /// - Returns: 下标
-    public func index(of element: E) -> Int {
+    public func index(of element: E?) -> Int {
         for i in 0..<count {
-            if elements[i] as! E == element {
+            if elements[i]! == element {
                 return i
             }
         }
@@ -78,16 +83,8 @@ public class ArrayList<E: Equatable>: NSObject {
     /// 数组是否包含某个元素
     /// - Parameter element: 元素
     /// - Returns: 是否包含
-    public func contains(_ element: E) -> Bool {
+    public func contains(_ element: E?) -> Bool {
         return index(of: element) != -1
-    }
-    
-    /// 获取某个下标的元素
-    /// - Parameter index: 下标
-    /// - Returns: 元素
-    private func get(_ index: Int) -> E {
-        rangeCheck(index)
-        return elements[index] as! E
     }
     
     
@@ -112,7 +109,17 @@ public class ArrayList<E: Equatable>: NSObject {
         count = 0
     }
     
-    /// 下标检测
+    // MARK: 私有
+    
+    /// 获取某个下标的元素
+    /// - Parameter index: 下标
+    /// - Returns: 元素
+    private func get(_ index: Int) -> E {
+        rangeCheck(index)
+        return elements[index]!
+    }
+    
+    /// 下标检测合法
     /// - Parameter index: 下标
     private func rangeCheck(_ index: Int) {
         if (index < 0 || index >= count) {
@@ -135,7 +142,7 @@ public class ArrayList<E: Equatable>: NSObject {
                 
         // 新容量为旧容量的1.5倍
         let newCapacity = oldCapacity + (oldCapacity >> 1);
-        var newElements: Array<Any?> = Array(repeating: nil, count: newCapacity)
+        var newElements: Array<E?> = Array(repeating: nil, count: newCapacity)
         for i in 0..<count {
             newElements[i] = elements[i];
         }

@@ -3,7 +3,10 @@
 //  DynamicArray
 //
 //  Created by 任成 on 2020/11/18.
+//
 //  链表练习
+//
+//
 
 import Cocoa
 
@@ -18,7 +21,7 @@ public class LinkedList<E: Equatable> {
         }
     }
     
-    private var first: Node<E>?
+    private var head: Node<E>?
     private(set) var count: Int = 0
     
     init() {
@@ -38,11 +41,10 @@ public class LinkedList<E: Equatable> {
     // MARK: 增
     
     public func append(_ element: E) {
-        ensureCapacity(count)
         
         let newNode = Node(element)
         if count == 0 {
-            first = newNode
+            head = newNode
         } else {
             let lastNode: Node? = searchNode(at: count - 1)
             lastNode?.next = newNode
@@ -56,16 +58,15 @@ public class LinkedList<E: Equatable> {
     ///   - index: 位置
     public func insert(_ element: E, at index: Int) {
         rangeCheckForAdd(index)
-        ensureCapacity(count)
         
         let currNode = Node(element)
         if count == 0 {
-            first = currNode
+            head = currNode
         } else {
             if index == 0 {
-                let node = first
+                let node = head
                 currNode.next = node
-                first = currNode
+                head = currNode
             } else if index == count {
                 let lastNode = searchNode(at: index - 1)
                 lastNode.next = currNode
@@ -87,8 +88,8 @@ public class LinkedList<E: Equatable> {
     /// 找到元素在数组中的首个位置
     /// - Parameter element: 元素
     /// - Returns: 下标
-    public func index(of element: E) -> Int {
-        var node = first
+    public func index(of element: E?) -> Int {
+        var node = head
         for index in 0..<count {
             if node?.val == element {
                 return index
@@ -120,7 +121,7 @@ public class LinkedList<E: Equatable> {
     
     private func searchNode(at index: Int) -> Node<E> {
         rangeCheck(index)
-        var node = first
+        var node = head
         for _ in 0..<index {
             node = node?.next
         }
@@ -135,7 +136,7 @@ public class LinkedList<E: Equatable> {
     public func remove(at index: Int) {
         rangeCheck(index)
         if index == 0 {
-            first = searchNode(at: index + 1)
+            head = searchNode(at: index + 1)
         } else {
             let lastNode = searchNode(at: index - 1)
             let nextNode: Node? = index + 1 >= count ? searchNode(at: index + 1) : nil
@@ -147,7 +148,7 @@ public class LinkedList<E: Equatable> {
     /// 清理所有元素
     public func removeAll() {
         count = 0
-        first = nil
+        head = nil
     }
     
     /// 下标检测
@@ -164,22 +165,6 @@ public class LinkedList<E: Equatable> {
         if (index < 0 || index > count) {
             exit(1)
         }
-    }
-    
-    /// 动态扩容
-    private func ensureCapacity(_ capacity: Int) {
-//        let oldCapacity = elements.count
-//        guard oldCapacity <= capacity else { return }
-//
-//        // 新容量为旧容量的1.5倍
-//        let newCapacity = oldCapacity + (oldCapacity >> 1);
-//        var newElements: Array<Any> = Array(repeating: 0, count: newCapacity)
-//        for i in 0..<count {
-//            newElements[i] = elements[i];
-//        }
-//        elements = newElements;
-//
-//        print("\(oldCapacity) 扩容为 \(newCapacity)");
     }
     
 }

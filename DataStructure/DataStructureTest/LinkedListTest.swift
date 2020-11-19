@@ -98,7 +98,7 @@ class LinkedListTest: XCTestCase {
     func testPerformance() {
         let arr = LinkedList<Int>()
         measure {
-            for _ in 0..<10000 {
+            for _ in 0..<10 {
                 arr.insert(20, at: 0)
             }
         }
