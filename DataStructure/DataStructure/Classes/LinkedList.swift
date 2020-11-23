@@ -40,8 +40,11 @@ public class LinkedList<E: Equatable> {
     
     // MARK: 增
     
+    
+    /// 追加一个新元素
+    /// - Parameter element: 元素
+    /// - min: O(1) max:  O(n) avg: O(n)
     public func append(_ element: E) {
-        
         let newNode = Node(element)
         if count == 0 {
             head = newNode
@@ -56,6 +59,7 @@ public class LinkedList<E: Equatable> {
     /// - Parameters:
     ///   - element: 元素
     ///   - index: 位置
+    /// - min: O(1) max:  O(n) avg: O(n)
     public func insert(_ element: E, at index: Int) {
         rangeCheckForAdd(index)
         
@@ -77,7 +81,6 @@ public class LinkedList<E: Equatable> {
                 currNode.next = nextNode
             }
         }
-
         count += 1
     }
     
@@ -88,6 +91,7 @@ public class LinkedList<E: Equatable> {
     /// 找到元素在数组中的首个位置
     /// - Parameter element: 元素
     /// - Returns: 下标
+    /// - min: O(1) max:  O(n) avg: O(n)
     public func index(of element: E?) -> Int {
         var node = head
         for index in 0..<count {
@@ -107,6 +111,7 @@ public class LinkedList<E: Equatable> {
     /// 数组是否包含某个元素
     /// - Parameter element: 元素
     /// - Returns: 是否包含
+    /// - min: O(1) max:  O(n) avg: O(n)
     public func contains(_ element: E) -> Bool {
         return index(of: element) != -1
     }
@@ -114,11 +119,17 @@ public class LinkedList<E: Equatable> {
     /// 获取某个下标的元素
     /// - Parameter index: 下标
     /// - Returns: 元素
+    /// - min: O(1) max:  O(n) avg: O(n)
     public func get(_ index: Int) -> E {
         let node = searchNode(at: index)
         return node.val
     }
     
+    
+    /// 根据下标找元素
+    /// - Parameter index: 下标
+    /// - Returns: 元素
+    /// - min: O(1) max:  O(n) avg: O(n)
     private func searchNode(at index: Int) -> Node<E> {
         rangeCheck(index)
         var node = head
@@ -133,6 +144,7 @@ public class LinkedList<E: Equatable> {
     
     /// 删除某一个元素
     /// - Parameter index: 下标
+    /// - min: O(1) max:  O(n) avg: O(n)
     public func remove(at index: Int) {
         rangeCheck(index)
         if index == 0 {
@@ -146,6 +158,7 @@ public class LinkedList<E: Equatable> {
     }
     
     /// 清理所有元素
+    /// - min: O(1)
     public func removeAll() {
         count = 0
         head = nil
@@ -153,6 +166,7 @@ public class LinkedList<E: Equatable> {
     
     /// 下标检测
     /// - Parameter index: 下标
+    /// - min: O(1)
     private func rangeCheck(_ index: Int) {
         if (index < 0 || index >= count) {
             exit(1)
@@ -161,6 +175,7 @@ public class LinkedList<E: Equatable> {
     
     /// 添加下标检测
     /// - Parameter index: 下标
+    /// - min: O(1)
     private func rangeCheckForAdd(_ index: Int) {
         if (index < 0 || index > count) {
             exit(1)
