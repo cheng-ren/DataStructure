@@ -8,12 +8,20 @@
 import Foundation
 
 let arr = LinkedList<Int>()
+arr.append(10)
+arr.append(20)
+arr.append(30)
+arr.append(40)
+arr.remove(at: 0)
+print(arr)
 
-for _ in 0..<10000 {
-    arr.insert(20, at: 0)
-//    arr.append(20)
-    print(arr.count)
-}
+//let arr = SignleLinkedList<Int>()
+//
+//for _ in 0..<10000 {
+//    arr.insert(20, at: 0)
+////    arr.append(20)
+//    print(arr.count)
+//}
 
 print("结束")
 

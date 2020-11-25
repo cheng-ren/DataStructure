@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF188F3F256BDC9100EBFF4D /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF188F3E256BDC9100EBFF4D /* LinkedList.swift */; };
+		AF188F43256BDDAE00EBFF4D /* LinkedListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF188F42256BDDAE00EBFF4D /* LinkedListTest.swift */; };
+		AF188F48256BDE7000EBFF4D /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF188F3E256BDC9100EBFF4D /* LinkedList.swift */; };
 		AF636E5225651E890061E615 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5125651E890061E615 /* main.swift */; };
-		AF636E5C256520070061E615 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5A256520070061E615 /* LinkedList.swift */; };
+		AF636E5C256520070061E615 /* SignleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5A256520070061E615 /* SignleLinkedList.swift */; };
 		AF636E5D256520070061E615 /* ArrayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5B256520070061E615 /* ArrayList.swift */; };
 		AF636E662565207C0061E615 /* DataStructureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E652565207C0061E615 /* DataStructureTest.swift */; };
 		AF636E6E256520A90061E615 /* ArrayListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E6D256520A90061E615 /* ArrayListTest.swift */; };
 		AF636E74256520C40061E615 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E73256520C40061E615 /* Person.swift */; };
 		AF636E77256521050061E615 /* ArrayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5B256520070061E615 /* ArrayList.swift */; };
-		AF636E7A256521090061E615 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5A256520070061E615 /* LinkedList.swift */; };
+		AF636E7A256521090061E615 /* SignleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5A256520070061E615 /* SignleLinkedList.swift */; };
 		AF636E7D2565210C0061E615 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E73256520C40061E615 /* Person.swift */; };
-		AF636E8125653E780061E615 /* LinkedListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E8025653E780061E615 /* LinkedListTest.swift */; };
+		AF636E8125653E780061E615 /* SignleLinkedListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E8025653E780061E615 /* SignleLinkedListTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,16 +35,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AF188F3E256BDC9100EBFF4D /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		AF188F42256BDDAE00EBFF4D /* LinkedListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTest.swift; sourceTree = "<group>"; };
 		AF636E4E25651E890061E615 /* DataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF636E5125651E890061E615 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		AF636E5A256520070061E615 /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		AF636E5A256520070061E615 /* SignleLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignleLinkedList.swift; sourceTree = "<group>"; };
 		AF636E5B256520070061E615 /* ArrayList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayList.swift; sourceTree = "<group>"; };
 		AF636E632565207C0061E615 /* DataStructureTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructureTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF636E652565207C0061E615 /* DataStructureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTest.swift; sourceTree = "<group>"; };
 		AF636E672565207C0061E615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF636E6D256520A90061E615 /* ArrayListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayListTest.swift; sourceTree = "<group>"; };
 		AF636E73256520C40061E615 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		AF636E8025653E780061E615 /* LinkedListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTest.swift; sourceTree = "<group>"; };
+		AF636E8025653E780061E615 /* SignleLinkedListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignleLinkedListTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +100,8 @@
 			children = (
 				AF636E652565207C0061E615 /* DataStructureTest.swift */,
 				AF636E6D256520A90061E615 /* ArrayListTest.swift */,
-				AF636E8025653E780061E615 /* LinkedListTest.swift */,
+				AF636E8025653E780061E615 /* SignleLinkedListTest.swift */,
+				AF188F42256BDDAE00EBFF4D /* LinkedListTest.swift */,
 				AF636E672565207C0061E615 /* Info.plist */,
 			);
 			path = DataStructureTest;
@@ -113,7 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				AF636E5B256520070061E615 /* ArrayList.swift */,
-				AF636E5A256520070061E615 /* LinkedList.swift */,
+				AF636E5A256520070061E615 /* SignleLinkedList.swift */,
+				AF188F3E256BDC9100EBFF4D /* LinkedList.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -206,8 +213,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF636E5C256520070061E615 /* LinkedList.swift in Sources */,
+				AF636E5C256520070061E615 /* SignleLinkedList.swift in Sources */,
 				AF636E5D256520070061E615 /* ArrayList.swift in Sources */,
+				AF188F3F256BDC9100EBFF4D /* LinkedList.swift in Sources */,
 				AF636E74256520C40061E615 /* Person.swift in Sources */,
 				AF636E5225651E890061E615 /* main.swift in Sources */,
 			);
@@ -218,10 +226,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF636E7D2565210C0061E615 /* Person.swift in Sources */,
+				AF188F43256BDDAE00EBFF4D /* LinkedListTest.swift in Sources */,
 				AF636E662565207C0061E615 /* DataStructureTest.swift in Sources */,
-				AF636E8125653E780061E615 /* LinkedListTest.swift in Sources */,
+				AF636E8125653E780061E615 /* SignleLinkedListTest.swift in Sources */,
 				AF636E77256521050061E615 /* ArrayList.swift in Sources */,
-				AF636E7A256521090061E615 /* LinkedList.swift in Sources */,
+				AF636E7A256521090061E615 /* SignleLinkedList.swift in Sources */,
+				AF188F48256BDE7000EBFF4D /* LinkedList.swift in Sources */,
 				AF636E6E256520A90061E615 /* ArrayListTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

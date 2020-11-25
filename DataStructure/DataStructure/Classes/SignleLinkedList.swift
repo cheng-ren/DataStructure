@@ -1,32 +1,30 @@
 //
-//  LinkedList.swift
-//  DataStructure
+//  SignleLinkedList.swift
+//  DynamicArray
 //
-//  Created by 任成 on 2020/11/23.
+//  Created by 任成 on 2020/11/18.
+//
+//  链表练习
+//
 //
 
 import Cocoa
 
-public class LinkedList<E: Equatable>: NSObject {
-    private class Node<E>: NSObject {
+
+public class SignleLinkedList<E: Equatable> {
+    private class Node<E> {
         let val: E
         var next: Node?
-        var prev: Node?
         
         init(_ val: E) {
             self.val = val
         }
-        
-        override var description: String {
-            return "\(val)"
-        }
     }
     
     private var head: Node<E>?
-    private var last: Node<E>?
     private(set) var count: Int = 0
     
-    override init() {
+    init() {
         
     }
     
@@ -47,7 +45,14 @@ public class LinkedList<E: Equatable>: NSObject {
     /// - Parameter element: 元素
     /// - min: O(1) max:  O(n) avg: O(n)
     public func append(_ element: E) {
-        self.insert(element, at: count)
+        let newNode = Node(element)
+        if count == 0 {
+            head = newNode
+        } else {
+            let lastNode: Node? = searchNode(at: count - 1)
+            lastNode?.next = newNode
+        }
+        count += 1
     }
     
     /// 插入元素到指定位置
@@ -61,24 +66,19 @@ public class LinkedList<E: Equatable>: NSObject {
         let currNode = Node(element)
         if count == 0 {
             head = currNode
-            last = currNode
         } else {
-            if index == 0 { // 5
-                currNode.next = head
-                head?.prev = currNode
+            if index == 0 {
+                let node = head
+                currNode.next = node
                 head = currNode
             } else if index == count {
-                let prevNode = last
-                prevNode?.next = currNode
-                currNode.prev = prevNode
-                last = currNode
+                let lastNode = searchNode(at: index - 1)
+                lastNode.next = currNode
             } else {
+                let lastNode = searchNode(at: index - 1)
                 let nextNode = searchNode(at: index)
-                let prevNode = nextNode.prev
-                currNode.prev = prevNode
+                lastNode.next = currNode
                 currNode.next = nextNode
-                nextNode.prev = currNode
-                prevNode?.next = currNode
             }
         }
         count += 1
@@ -132,19 +132,11 @@ public class LinkedList<E: Equatable>: NSObject {
     /// - min: O(1) max:  O(n) avg: O(n)
     private func searchNode(at index: Int) -> Node<E> {
         rangeCheck(index)
-        if index <= (count >> 2) {
-            var node = head
-            for _ in 0..<index {
-                node = node?.next
-            }
-            return node!
-        } else {
-            var node = last
-            for _ in 0..<(count - index - 1) {
-                node = node?.prev
-            }
-            return node!
+        var node = head
+        for _ in 0..<index {
+            node = node?.next
         }
+        return node!
     }
     
     
@@ -157,11 +149,10 @@ public class LinkedList<E: Equatable>: NSObject {
         rangeCheck(index)
         if index == 0 {
             head = head?.next
-            head?.prev = nil
         } else {
-            let node = searchNode(at: index)
-            node.prev?.next = node.next
-            node.next?.prev = node.prev
+            let lastNode = searchNode(at: index - 1)
+            let nextNode: Node? = index + 1 >= count ? searchNode(at: index + 1) : nil
+            lastNode.next = nextNode
         }
         count -= 1
     }
@@ -171,7 +162,6 @@ public class LinkedList<E: Equatable>: NSObject {
     public func removeAll() {
         count = 0
         head = nil
-        last = nil
     }
     
     /// 下标检测
@@ -192,16 +182,4 @@ public class LinkedList<E: Equatable>: NSObject {
         }
     }
     
-    public override var description: String {
-        var prin: String = "["
-        var nextNode: Node? = head
-        while nextNode != nil {
-            prin += " \(nextNode!.val) ->"
-            nextNode = nextNode?.next
-        }
-        
-        prin = String(prin.prefix(prin.count - 2))
-        return prin + "]"
-    }
-
 }
