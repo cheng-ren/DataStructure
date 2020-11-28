@@ -11,15 +11,23 @@
 		AF188F43256BDDAE00EBFF4D /* LinkedListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF188F42256BDDAE00EBFF4D /* LinkedListTest.swift */; };
 		AF188F48256BDE7000EBFF4D /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF188F3E256BDC9100EBFF4D /* LinkedList.swift */; };
 		AF636E5225651E890061E615 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5125651E890061E615 /* main.swift */; };
-		AF636E5C256520070061E615 /* SignleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5A256520070061E615 /* SignleLinkedList.swift */; };
+		AF636E5C256520070061E615 /* SingleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5A256520070061E615 /* SingleLinkedList.swift */; };
 		AF636E5D256520070061E615 /* ArrayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5B256520070061E615 /* ArrayList.swift */; };
 		AF636E662565207C0061E615 /* DataStructureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E652565207C0061E615 /* DataStructureTest.swift */; };
 		AF636E6E256520A90061E615 /* ArrayListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E6D256520A90061E615 /* ArrayListTest.swift */; };
 		AF636E74256520C40061E615 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E73256520C40061E615 /* Person.swift */; };
 		AF636E77256521050061E615 /* ArrayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5B256520070061E615 /* ArrayList.swift */; };
-		AF636E7A256521090061E615 /* SignleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5A256520070061E615 /* SignleLinkedList.swift */; };
+		AF636E7A256521090061E615 /* SingleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E5A256520070061E615 /* SingleLinkedList.swift */; };
 		AF636E7D2565210C0061E615 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E73256520C40061E615 /* Person.swift */; };
-		AF636E8125653E780061E615 /* SignleLinkedListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E8025653E780061E615 /* SignleLinkedListTest.swift */; };
+		AF636E8125653E780061E615 /* SingleLinkedListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636E8025653E780061E615 /* SingleLinkedListTest.swift */; };
+		AF642CE2256E7CA500099E6E /* SingleCircleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF642CE1256E7CA500099E6E /* SingleCircleLinkedList.swift */; };
+		AF642CE6256E815B00099E6E /* SingleCircleLinkedListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF642CE5256E815B00099E6E /* SingleCircleLinkedListTest.swift */; };
+		AF642CED256E818700099E6E /* SingleCircleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF642CE1256E7CA500099E6E /* SingleCircleLinkedList.swift */; };
+		AF98F99B25723448001E1234 /* CircleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF98F99A25723448001E1234 /* CircleLinkedList.swift */; };
+		AF98F99F25723651001E1234 /* CirleLinkedListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF98F99E25723651001E1234 /* CirleLinkedListTest.swift */; };
+		AF98F9A225723672001E1234 /* CircleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF98F99A25723448001E1234 /* CircleLinkedList.swift */; };
+		AF98F9AB25725F70001E1234 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF98F9AA25725F70001E1234 /* Stack.swift */; };
+		AF98F9B925726598001E1234 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF98F9B825726598001E1234 /* Queue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,14 +47,20 @@
 		AF188F42256BDDAE00EBFF4D /* LinkedListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTest.swift; sourceTree = "<group>"; };
 		AF636E4E25651E890061E615 /* DataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF636E5125651E890061E615 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		AF636E5A256520070061E615 /* SignleLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignleLinkedList.swift; sourceTree = "<group>"; };
+		AF636E5A256520070061E615 /* SingleLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleLinkedList.swift; sourceTree = "<group>"; };
 		AF636E5B256520070061E615 /* ArrayList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayList.swift; sourceTree = "<group>"; };
 		AF636E632565207C0061E615 /* DataStructureTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructureTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF636E652565207C0061E615 /* DataStructureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTest.swift; sourceTree = "<group>"; };
 		AF636E672565207C0061E615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF636E6D256520A90061E615 /* ArrayListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayListTest.swift; sourceTree = "<group>"; };
 		AF636E73256520C40061E615 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		AF636E8025653E780061E615 /* SignleLinkedListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignleLinkedListTest.swift; sourceTree = "<group>"; };
+		AF636E8025653E780061E615 /* SingleLinkedListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLinkedListTest.swift; sourceTree = "<group>"; };
+		AF642CE1256E7CA500099E6E /* SingleCircleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCircleLinkedList.swift; sourceTree = "<group>"; };
+		AF642CE5256E815B00099E6E /* SingleCircleLinkedListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCircleLinkedListTest.swift; sourceTree = "<group>"; };
+		AF98F99A25723448001E1234 /* CircleLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleLinkedList.swift; sourceTree = "<group>"; };
+		AF98F99E25723651001E1234 /* CirleLinkedListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirleLinkedListTest.swift; sourceTree = "<group>"; };
+		AF98F9AA25725F70001E1234 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		AF98F9B825726598001E1234 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +114,10 @@
 			children = (
 				AF636E652565207C0061E615 /* DataStructureTest.swift */,
 				AF636E6D256520A90061E615 /* ArrayListTest.swift */,
-				AF636E8025653E780061E615 /* SignleLinkedListTest.swift */,
+				AF636E8025653E780061E615 /* SingleLinkedListTest.swift */,
 				AF188F42256BDDAE00EBFF4D /* LinkedListTest.swift */,
+				AF642CE5256E815B00099E6E /* SingleCircleLinkedListTest.swift */,
+				AF98F99E25723651001E1234 /* CirleLinkedListTest.swift */,
 				AF636E672565207C0061E615 /* Info.plist */,
 			);
 			path = DataStructureTest;
@@ -118,11 +134,55 @@
 		AF636E8525656B1A0061E615 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				AF636E5B256520070061E615 /* ArrayList.swift */,
-				AF636E5A256520070061E615 /* SignleLinkedList.swift */,
-				AF188F3E256BDC9100EBFF4D /* LinkedList.swift */,
+				AF98F9B7257264A7001E1234 /* 线性表 */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		AF98F9A725725F3B001E1234 /* 动态数组 */ = {
+			isa = PBXGroup;
+			children = (
+				AF636E5B256520070061E615 /* ArrayList.swift */,
+			);
+			path = "动态数组";
+			sourceTree = "<group>";
+		};
+		AF98F9A825725F44001E1234 /* 链表 */ = {
+			isa = PBXGroup;
+			children = (
+				AF636E5A256520070061E615 /* SingleLinkedList.swift */,
+				AF188F3E256BDC9100EBFF4D /* LinkedList.swift */,
+				AF642CE1256E7CA500099E6E /* SingleCircleLinkedList.swift */,
+				AF98F99A25723448001E1234 /* CircleLinkedList.swift */,
+			);
+			path = "链表";
+			sourceTree = "<group>";
+		};
+		AF98F9A925725F55001E1234 /* 栈 */ = {
+			isa = PBXGroup;
+			children = (
+				AF98F9AA25725F70001E1234 /* Stack.swift */,
+			);
+			path = "栈";
+			sourceTree = "<group>";
+		};
+		AF98F9B62572648A001E1234 /* 队列 */ = {
+			isa = PBXGroup;
+			children = (
+				AF98F9B825726598001E1234 /* Queue.swift */,
+			);
+			path = "队列";
+			sourceTree = "<group>";
+		};
+		AF98F9B7257264A7001E1234 /* 线性表 */ = {
+			isa = PBXGroup;
+			children = (
+				AF98F9A725725F3B001E1234 /* 动态数组 */,
+				AF98F9A825725F44001E1234 /* 链表 */,
+				AF98F9A925725F55001E1234 /* 栈 */,
+				AF98F9B62572648A001E1234 /* 队列 */,
+			);
+			path = "线性表";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,10 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF636E5C256520070061E615 /* SignleLinkedList.swift in Sources */,
+				AF642CE2256E7CA500099E6E /* SingleCircleLinkedList.swift in Sources */,
+				AF636E5C256520070061E615 /* SingleLinkedList.swift in Sources */,
 				AF636E5D256520070061E615 /* ArrayList.swift in Sources */,
+				AF98F99B25723448001E1234 /* CircleLinkedList.swift in Sources */,
+				AF98F9AB25725F70001E1234 /* Stack.swift in Sources */,
 				AF188F3F256BDC9100EBFF4D /* LinkedList.swift in Sources */,
 				AF636E74256520C40061E615 /* Person.swift in Sources */,
+				AF98F9B925726598001E1234 /* Queue.swift in Sources */,
 				AF636E5225651E890061E615 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,12 +289,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF98F99F25723651001E1234 /* CirleLinkedListTest.swift in Sources */,
 				AF636E7D2565210C0061E615 /* Person.swift in Sources */,
+				AF642CE6256E815B00099E6E /* SingleCircleLinkedListTest.swift in Sources */,
+				AF642CED256E818700099E6E /* SingleCircleLinkedList.swift in Sources */,
 				AF188F43256BDDAE00EBFF4D /* LinkedListTest.swift in Sources */,
 				AF636E662565207C0061E615 /* DataStructureTest.swift in Sources */,
-				AF636E8125653E780061E615 /* SignleLinkedListTest.swift in Sources */,
+				AF98F9A225723672001E1234 /* CircleLinkedList.swift in Sources */,
+				AF636E8125653E780061E615 /* SingleLinkedListTest.swift in Sources */,
 				AF636E77256521050061E615 /* ArrayList.swift in Sources */,
-				AF636E7A256521090061E615 /* SignleLinkedList.swift in Sources */,
+				AF636E7A256521090061E615 /* SingleLinkedList.swift in Sources */,
 				AF188F48256BDE7000EBFF4D /* LinkedList.swift in Sources */,
 				AF636E6E256520A90061E615 /* ArrayListTest.swift in Sources */,
 			);

@@ -11,7 +11,7 @@
 import Cocoa
 
 
-public class SignleLinkedList<E: Equatable> {
+public class SingleLinkedList<E: Equatable> {
     private class Node<E> {
         let val: E
         var next: Node?

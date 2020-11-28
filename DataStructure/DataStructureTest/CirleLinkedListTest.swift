@@ -1,25 +1,27 @@
 //
-//  LinkedListTest.swift
+//  CirleLinkedListTest.swift
 //  DataStructureTest
 //
-//  Created by 任成 on 2020/11/18.
+//  Created by 任成 on 2020/11/28.
 //
 
 import XCTest
 
-class SignleLinkedListTest: XCTestCase {
+class CirleLinkedListTest: XCTestCase {
     
     // MARK: 增
     
     func testAppend() {
-        let arr = SignleLinkedList<Int>()
+        let arr = CirleLinkedList<Int>()
         arr.append(2)
+        arr.append(2)
+        arr.append(3)
         XCTAssertTrue(arr.contains(2), "找到指定元素")
         XCTAssertFalse(arr.contains(0), "找到指定元素")
     }
     
     func testInsert() {
-        let arr = SignleLinkedList<Int>()
+        let arr = CirleLinkedList<Int>()
         arr.insert(3, at: 0)
         arr.insert(4, at: 1)
         XCTAssertEqual(arr.count, 2)
@@ -31,7 +33,7 @@ class SignleLinkedListTest: XCTestCase {
     // MARK: 删
     
     func testRemove() {
-        let arr = SignleLinkedList<Int>()
+        let arr = CirleLinkedList<Int>()
         arr.append(10)
         arr.append(20)
         arr.append(30)
@@ -48,7 +50,7 @@ class SignleLinkedListTest: XCTestCase {
     // MARK: 改
     
     func testUpdate() {
-        let arr = SignleLinkedList<Int>()
+        let arr = CirleLinkedList<Int>()
         arr.append(10)
         arr.append(20)
         XCTAssertEqual(arr[1], 20)
@@ -61,7 +63,7 @@ class SignleLinkedListTest: XCTestCase {
     // MARK: 查
     
     func testEmpty() {
-        let arr = SignleLinkedList<Int>()
+        let arr = CirleLinkedList<Int>()
         arr.append(10)
         XCTAssertFalse(arr.isEmpty())
         arr.removeAll()
@@ -69,7 +71,7 @@ class SignleLinkedListTest: XCTestCase {
     }
     
     func testSearchIndex() {
-        let arr = SignleLinkedList<Int>()
+        let arr = CirleLinkedList<Int>()
         arr.append(10)
         arr.append(20)
         arr.append(10)
@@ -78,7 +80,7 @@ class SignleLinkedListTest: XCTestCase {
     }
     
     func testContains() {
-        let arr = SignleLinkedList<Int>()
+        let arr = CirleLinkedList<Int>()
         arr.append(10)
         arr.append(20)
         XCTAssertTrue(arr.contains(10))
@@ -96,7 +98,7 @@ class SignleLinkedListTest: XCTestCase {
     // MARK: 性能
     
     func testPerformance() {
-        let arr = SignleLinkedList<Int>()
+        let arr = CirleLinkedList<Int>()
         measure {
             for _ in 0..<10 {
                 arr.insert(20, at: 0)
