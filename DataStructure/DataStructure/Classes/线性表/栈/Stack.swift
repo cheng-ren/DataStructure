@@ -7,15 +7,15 @@
 
 import Cocoa
 
-class Stack<E>: NSObject {
+class Stack<E: Equatable>: NSObject {
     
-    private var elements: Array<E> = []
+    private var elements: ArrayList<E> = ArrayList(capacity: 1)
     
     var count: Int { elements.count }
     
     var isEmpty: Bool { count == 0 }
     
-    var front: E? { elements.last }
+    var peek: E? { elements[count - 1] }
     
     override init() {
         
@@ -26,7 +26,7 @@ class Stack<E>: NSObject {
     }
     
     func pop() {
-        elements.removeLast()
+        elements.remove(at: count - 1)
     }
     
     func removeAll() {

@@ -28,6 +28,7 @@
 		AF98F9A225723672001E1234 /* CircleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF98F99A25723448001E1234 /* CircleLinkedList.swift */; };
 		AF98F9AB25725F70001E1234 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF98F9AA25725F70001E1234 /* Stack.swift */; };
 		AF98F9B925726598001E1234 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF98F9B825726598001E1234 /* Queue.swift */; };
+		AF98F9C62572738A001E1234 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF98F9C52572738A001E1234 /* BinarySearchTree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +62,7 @@
 		AF98F99E25723651001E1234 /* CirleLinkedListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirleLinkedListTest.swift; sourceTree = "<group>"; };
 		AF98F9AA25725F70001E1234 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		AF98F9B825726598001E1234 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		AF98F9C52572738A001E1234 /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				AF98F9B7257264A7001E1234 /* 线性表 */,
+				AF98F9C425727365001E1234 /* 二叉树 */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -183,6 +186,14 @@
 				AF98F9B62572648A001E1234 /* 队列 */,
 			);
 			path = "线性表";
+			sourceTree = "<group>";
+		};
+		AF98F9C425727365001E1234 /* 二叉树 */ = {
+			isa = PBXGroup;
+			children = (
+				AF98F9C52572738A001E1234 /* BinarySearchTree.swift */,
+			);
+			path = "二叉树";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +288,7 @@
 				AF636E5C256520070061E615 /* SingleLinkedList.swift in Sources */,
 				AF636E5D256520070061E615 /* ArrayList.swift in Sources */,
 				AF98F99B25723448001E1234 /* CircleLinkedList.swift in Sources */,
+				AF98F9C62572738A001E1234 /* BinarySearchTree.swift in Sources */,
 				AF98F9AB25725F70001E1234 /* Stack.swift in Sources */,
 				AF188F3F256BDC9100EBFF4D /* LinkedList.swift in Sources */,
 				AF636E74256520C40061E615 /* Person.swift in Sources */,
