@@ -7,12 +7,22 @@
 
 import Foundation
 
-let stack = Queue<Int>()
-stack.enQueue(12)
-stack.enQueue(13)
-stack.enQueue(14)
-stack.deQueue()
-print(stack)
+let tree = BinarySearchTree<Int>()
+let arr = [7, 4, 2, 3, 1, 5, 9, 8, 11, 10, 12]
+for i in arr {
+    tree.append(i)
+}
+tree.levelOrderTraversal { ele in
+    print(ele, separator: " ", terminator: " ")
+}
+
+
+//let stack = Queue<Int>()
+//stack.enQueue(12)
+//stack.enQueue(13)
+//stack.enQueue(14)
+//stack.deQueue()
+//print(stack)
 
 //let arr = SingleCircleLinkedList<Int>()
 //arr.append(10)
@@ -37,7 +47,7 @@ print(stack)
 ////    arr.append(20)
 //    print(arr.count)
 //}
-
+print("")
 print("结束")
 
 //let arr = ArrayList<Person>(capacity: 2)

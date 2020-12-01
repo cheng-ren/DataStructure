@@ -24,8 +24,10 @@ class Queue<E: Equatable>: NSObject {
         elements.append(element)
     }
     
-    func deQueue() {
+    func deQueue() -> E {
+        let ret = elements[0]
         elements.remove(at: 0)
+        return ret
     }
     
     func removeAll() {
